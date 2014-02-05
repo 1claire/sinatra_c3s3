@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Event Manager 2.0</title>
-</head>
-<body>
+
   <h1>Event schedule</h1>
 
   <table>
-    <tr>
-      <td>8pm</td>
-      <td>Doors open</td>
-    </tr>
-    <!-- etc. etc. -->
-  </table>
+    	<% @schedule.each do |anEvent| %>
+    	<tr> 
+    		<td> <%= anEvent[0]%> </td>
+    		<td><%= anEvent[1]%> </td>
+    	</tr>
+    	<% end %>
 
-</body>
-</html>
+  </table>
